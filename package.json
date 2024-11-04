@@ -2,6 +2,7 @@
   "name": "nextjs-fabric-app",
   "version": "1.0.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@types/d3": "^7.4.3",
     "@types/d3-shape": "^3.1.6",
@@ -37,7 +38,8 @@
   "scripts": {
     "dev": "next dev & open http://localhost:3000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "browserslist": {
     "production": [
@@ -50,6 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "."
+  }
 }
