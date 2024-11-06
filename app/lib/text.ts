@@ -2,7 +2,6 @@ import { fabric } from "fabric"
 import FabricTool, { ConfigureCanvasProps } from "./fabrictool"
 
 class TextTool extends FabricTool {
-  // eslint-disable-next-line
   configureCanvas({}: ConfigureCanvasProps): () => void {
     this._canvas.isDrawingMode = false
     this._canvas.selection = false
@@ -20,17 +19,17 @@ class TextTool extends FabricTool {
     var pointer = canvas.getPointer(o.e)
 
     if (_clicked === 0) {
-      const userInput = prompt("Enter text:")
-      if (userInput) {
-        let text = new fabric.IText(userInput, {
-          left: pointer.x,
-          top: pointer.y,
-          fontSize: 25,
-          selectable: false,
-          evented: false,
-        })
-        canvas.add(text)
-      }
+      let text = new fabric.IText("", {
+        left: pointer.x,
+        top: pointer.y,
+        fontSize: 25,
+        selectable: true,
+        evented: true,
+      })
+      canvas.add(text)
+      canvas.setActiveObject(text)
+      text.enterEditing()
+      text.hiddenTextarea.focus()
     }
   }
 }

@@ -1,0 +1,48 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./app/components/NavBar.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+/* app/components/NavBar.module.css */
+.NavBar_nav__Kb_i8 {
+  background-color: #333;
+  padding: 10px;
+}
+
+.NavBar_navList__dXYct {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.NavBar_navItem__9F9EH a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.NavBar_navItem__9F9EH a:hover {
+  text-decoration: underline;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./app/components/CanvasToolbar.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+.CanvasToolbar_enabled__nBIsV {
+  cursor: pointer;
+  background: none;
+}
+
+.CanvasToolbar_disabled__rGI2V {
+  cursor: not-allowed;
+  filter: invert(95%) sepia(10%) saturate(657%) hue-rotate(184deg)
+    brightness(92%) contrast(95%);
+}
+
+.CanvasToolbar_enabled__nBIsV:hover {
+  filter: invert(41%) sepia(62%) saturate(7158%) hue-rotate(344deg)
+    brightness(101%) contrast(108%);
+}
+
+.CanvasToolbar_invertx__YgXL8 {
+  transform: scaleX(-1);
+}
+

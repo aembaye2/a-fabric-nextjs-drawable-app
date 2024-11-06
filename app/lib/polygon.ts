@@ -133,17 +133,30 @@ class PolygonTool extends FabricTool {
     let canvas = this._canvas
     // Double click adds two more points at the end, so we have to move back twice more...
     //AE: It think it is useful for doing undo on the canvas because if we try to use the undo button itself, it keeps drawing lines upto the borders of the canvas which is ugly
-    for (let i = 0; i < 3; i++) {
-      let _last_pt_idx = this._pathString.lastIndexOf("L")
-      if (_last_pt_idx === -1) {
-        this._pathString = "M "
-        canvas.remove(this.startCircle)
-      } else {
-        this._pathString = this._pathString.slice(0, _last_pt_idx)
-      }
-    }
+    // for (let i = 0; i < 3; i++) {
+    //   let _last_pt_idx = this._pathString.lastIndexOf("L")
+    //   if (_last_pt_idx === -1) {
+    //     this._pathString = "M "
+    //     canvas.remove(this.startCircle)
+    //   } else {
+    //     this._pathString = this._pathString.slice(0, _last_pt_idx)
+    //   }
+    // }
 
-    canvas.remove(this.currentLine)
+    // canvas.remove(this.currentLine)
+    // canvas.remove(this.currentPath)
+    // this.currentPath = new fabric.Path(this._pathString, {
+    //   strokeWidth: this.strokeWidth,
+    //   fill: this.fillColor,
+    //   stroke: this.strokeColor,
+    //   originX: "center",
+    //   originY: "center",
+    //   selectable: false,
+    //   evented: false,
+    // })
+    // canvas.add(this.currentPath)
+    this._pathString += "z"
+    canvas.remove(this.startCircle)
     canvas.remove(this.currentPath)
     this.currentPath = new fabric.Path(this._pathString, {
       strokeWidth: this.strokeWidth,
@@ -155,6 +168,8 @@ class PolygonTool extends FabricTool {
       evented: false,
     })
     canvas.add(this.currentPath)
+    this._pathString = "M "
+    this.isMouseDown = false
   }
 }
 export default PolygonTool
