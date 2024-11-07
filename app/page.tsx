@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <h1>Welcome to the Next.js App!</h1>
-      <p>Choose a quiz from the navigation above.</p>
+      <h1>Welcome to the Next.js Fabric.js App!</h1>
+      <p>Choose a quiz from the navigation above to work on.</p>
     </>
   )
 }

@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react"
 import { saveAs } from "file-saver"
 import html2canvas from "html2canvas"
 import { PDFDocument, StandardFonts } from "pdf-lib"
-import DrawingComponent from "../DrawingComponent"
+import DrawingComponent from "./DrawingComponent"
 
 const QuestionsComponent = ({ questions }) => {
   const [userAnswers, setUserAnswers] = useState({})
